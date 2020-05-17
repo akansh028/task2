@@ -1,3 +1,3 @@
 <?php
-prinnt "This is the first php page";
+print "This is the first php page";
 ?>
