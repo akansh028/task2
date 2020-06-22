@@ -24,6 +24,9 @@ spec:
       containers:
       - name: deploy-task3
         image: akansh028/apache-webserver-php
+        ports:
+        - containerPort: 80
+          name: deploy-task3
         imagePullPolicy: IfNotPresent
         volumeMounts:
           - mountPath: "/var/www/html"
