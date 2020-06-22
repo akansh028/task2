@@ -23,7 +23,7 @@ spec:
           claimName: pvc-task3
       containers:
       - name: deploy-task3
-        image: jenkins:latest
+        image: mytask2:v1
         imagePullPolicy: IfNotPresent
         volumeMounts:
           - mountPath: "/var/www/html"
