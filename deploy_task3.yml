@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: deploy-task3
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploy-task3
+  
+  template:
+    metadata:
+      name: deploy-task3
+      labels:
+        app: deploy-task3
+  
+    spec:
+      volumes:
+      - name: storage-task3
+        persistentVolumeClaim:
+          claimName: pvc-task3
+      containers:
+      - name: deploy-task3
+        image: jenkins:latest
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+          - mountPath: "/data_task3"
+            name: storage-task3
+      
