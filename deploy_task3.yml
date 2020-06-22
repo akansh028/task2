@@ -26,6 +26,6 @@ spec:
         image: jenkins:latest
         imagePullPolicy: IfNotPresent
         volumeMounts:
-          - mountPath: "/data_task3"
+          - mountPath: "/var/www/html"
             name: storage-task3
       
